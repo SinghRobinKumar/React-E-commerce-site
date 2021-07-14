@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch, Router, Route } from "react-router-dom";
+import { Switch, HashRouter, Router, Route } from "react-router-dom";
 import Nav from "./shared/Nav";
 import Footer from "./shared/Footer";
 import Product from "./Product";
@@ -14,7 +14,8 @@ const App = () => {
   };
 
   return (
-    <Router history={history}>
+    <HashRouter>
+      {/* <Router history={history}> */}
       <Nav onSearch={onSearchResults} />
       <Switch>
         <Route path="/" exact>
@@ -25,7 +26,8 @@ const App = () => {
         </Route>
       </Switch>
       <Footer />
-    </Router>
+      {/* </Router> */}
+    </HashRouter>
   );
 };
 
