@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  background-color: #232f3e;
+  padding: 25px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    span {
+      color: white;
+    }
+  }
+}
+
+.terms {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: yellow;
+  }
+}

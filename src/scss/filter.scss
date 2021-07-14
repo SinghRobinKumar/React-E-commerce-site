@@ -1,0 +1,31 @@
+.active {
+  border-bottom: medium solid black;
+  border-bottom-width: 80%;
+  color: black;
+  font-weight: bolder;
+}
+
+.filter {
+  margin-top: 2px;
+  color: #08a0bb;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    margin-right: 20px;
+    font-weight: bolder;
+    margin-top: 7px;
+  }
+
+  .filterItems {
+    padding: 7px 7px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: black;
+      font-weight: bolder;
+    }
+  }
+}
