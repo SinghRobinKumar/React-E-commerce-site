@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import faker from "faker";
 
 import "../css/product.css";
+import products from "../data/products.json";
 import reviews from "../data/reviews.json";
 
 const Product = () => {
@@ -13,23 +14,11 @@ const Product = () => {
   const [hidden, setHidden] = useState(false);
 
   const fetchData = id => {
-    fetch("../products.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(Response => {
-        return Response.json();
-      })
-      .then(result => {
-        return result.filter(data => data._id == id);
-      })
-      .then(data => {
-        data.map(d => {
-          setData(d);
-        });
-      });
+    const data = products;
+    const result = data.filter(data => data._id == id);
+    result.map(d => {
+      setData(d);
+    });
   };
 
   useEffect(() => {
@@ -62,7 +51,7 @@ const Product = () => {
         {data && (
           <>
             <div className="image">
-              <img src={data.images.large.url} />
+              <img src={data.images.large.url} alt={data.title} />
             </div>
             <div className="details">
               <h5 className="category">{getCategory(data.category)}</h5>

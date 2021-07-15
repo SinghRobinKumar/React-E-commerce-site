@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import _ from "lodash";
-import products from "../data/products.json";
 import "../css/filter.css";
 
 const FilterComponent = ({ data, onSortedData }) => {
