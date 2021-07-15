@@ -2,11 +2,12 @@
   display: flex;
   margin-top: 15px;
   .image {
+    width: 500px;
+    margin: 30px;
     img {
       height: auto;
-      width: 500px;
+      // width: 500px;
       max-height: 600px;
-      margin: 30px;
     }
   }
   .details {

@@ -29,14 +29,14 @@ hr {
 }
 
 .card .image {
-  height: 250px;
+  height: 220px;
   position: relative;
   margin-bottom: 30px;
 }
 
 .card .image img {
   height: 230px;
-  width: 210px;
+  max-width: 300px;
   position: absolute;
   top: 50%;
   left: 50%;

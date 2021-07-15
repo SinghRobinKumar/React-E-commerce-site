@@ -1093,56 +1093,6 @@
   {
     "images": {
       "large": {
-        "url": "http://ecx.images-amazon.com/images/I/21g0FaPsY3L.jpg",
-        "width": "500",
-        "height": "333"
-      }
-    },
-    "description": [
-      "<div class=\"aplus\"><div class=\"two-third-col\">  <div class=\"leftImage\" style=\"width: 300px;\"> <div id=\"image0\"><img src=\"http://ecx.images-amazon.com/images/I/11ZJdisYRhL.jpg\" alt=\"\"  ></div> </div> <div class=\"leftImage\" style=\"width: 300px;\"> <div id=\"image1\"><img src=\"http://ecx.images-amazon.com/images/I/111kAVOFW+L.jpg\" alt=\"\"  ></div> </div>  <h5><div id=\"header0\">Broadcast Yourself in Play</div></h5> <div id=\"text0\" class=\"a-spacing-small\"><p>Broadcast yourself in play with PlayStation Camera. Become a community sensation by adding a picture-in-picture video of yourself in gameplay livestreams. Create and share narrated game walkthroughs in HD video and voice chat through four built-in microphones. Enjoy stunning new levels of immersion as the 3D depth-sensing camera and DUALSHOCK 4 wireless controller’s light bar track player movements through space. Log in instantly with facial recognition and navigate PS4 system menu hands-free with voice inputs.</p></div> <h5><div id=\"header1\">Facial Recognition</div></h5> <div id=\"text1\" class=\"a-spacing-small\"><p>Log in and navigate your PlayStation 4 system immediately and hands-free with facial recognition and voice commands.</p></div> <h5><div id=\"header2\">Motion Gaming</div></h5> <div id=\"text2\" class=\"a-spacing-small\"><p>Put your gaming in motion as you control in-game actions through physical gestures. The PlayStation Camera’s 3D depth-sensing technology maps your room and reads your body’s movements in real space creating more realistic and accessible game experiences than ever before.</p></div> <h5><div id=\"header3\"></div></h5> <div id=\"text3\" class=\"a-spacing-small\"></div> <h5><div id=\"header4\"></div></h5> <div id=\"text4\" class=\"a-spacing-small\"></div> </div> <div class=\"third-col last\">  <div class=\"leftImage\" style=\"width: 300px;\"> <div id=\"image2\"><img src=\"http://ecx.images-amazon.com/images/I/11H1X4pyG4L.jpg\" alt=\"\"  ></div> </div> <div class=\"break\"> </div> <h5><div id=\"header5\">DUALSHOCK 4 Wireless Controller's Light Bar</div></h5> <div id=\"text5\" class=\"a-spacing-small\"><p>When combined with the DUALSHOCK 4 wireless controller's light bar, the evolutionary 3D depth-sensing technology in the PlayStation Camera enables precise player tracking. This enables game developers to create innovative experiences only the PlayStation 4 system can offer</p></div> <br> <h5><div id=\"header6\"></div></h5> <div id=\"list0\"></div> </div> </div>"
-    ],
-    "binding": "Video Game",
-    "brand": "Sony",
-    "catalognumberlist": { "CatalogNumberListElement": ["10040"] },
-    "ean": "0386070338244",
-    "esrbagerating": "Rating Pending",
-    "feature": [
-      "When combined with the DualShock 4 Wireless Controller's light bar, the evolutionary 3D depth-sensing technology in the PlayStation Camera allows it to precisely track a player's position in the room",
-      "From navigational voice commands to facial recognition, the PlayStation Camera adds incredible innovation to your gaming.",
-      "Automatically integrate a picture-in-picture video of yourself during gameplay broadcasts, and challenge your friends during play",
-      "Never leave a friend hanging or miss a chance to taunt your opponents with voice chat that keeps the conversation going, whether it's between rounds, between games, or just while kicking back"
-    ],
-    "genre": "action-games",
-    "hardwareplatform": "Playstation 4",
-    "isautographed": "0",
-    "iseligiblefortradein": "1",
-    "ismemorabilia": "0",
-    "label": "Sony Computer Entertainment",
-    "price": 5999,
-    "currency": "USD",
-    "manufacturer": "Sony Computer Entertainment",
-    "model": "10053",
-    "mpn": "10040",
-    "numberofitems": 1,
-    "operatingsystem": "playstation_4",
-    "packagequantity": "1",
-    "partnumber": "10040",
-    "platform": "PlayStation 4",
-    "productgroup": "Games",
-    "producttypename": "VIDEO_GAME_ACCESSORIES",
-    "publisher": "Sony Computer Entertainment",
-    "releasedate": { "$date": "2013-11-15T00:00:00.000+0100" },
-    "studio": "Sony Computer Entertainment",
-    "title": "PlayStation 4 Camera",
-    "upc": "386070338244",
-    "upclist": { "UPCListElement": ["386070338244", "711719100409"] },
-    "category": "/games/ps4",
-    "salesrank": 118,
-    "_id": 23
-  },
-  {
-    "images": {
-      "large": {
         "url": "http://ecx.images-amazon.com/images/I/41kxtajfNZL.jpg",
         "width": "500",
         "height": "334"
