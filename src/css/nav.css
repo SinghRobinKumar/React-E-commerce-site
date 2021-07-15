@@ -35,7 +35,7 @@
   font-size: 27px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   .nav-container .nav .brand-logo {
     display: none;
   }
@@ -43,7 +43,21 @@
     margin-left: 20px;
   }
   .nav-container .nav form .field {
-    width: 180px !important;
+    width: 70px !important;
+    padding: 3px !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .nav-container .nav .brand-logo {
+    display: none;
+  }
+  .nav-container .nav form {
+    margin-left: 20px;
+  }
+  .nav-container .nav form .field {
+    width: 130px !important;
     padding: 3px !important;
     border-radius: 8px !important;
   }

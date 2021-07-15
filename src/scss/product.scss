@@ -71,15 +71,14 @@
   }
 }
 
-@media (min-width: 200) and (max-width: 300px) {
+@media (min-width: 200px) and (max-width: 300px) {
   .product {
     display: block;
     .image {
-      margin-left: 0px;
       img {
-        display: block;
-        margin-left: 30%;
-        width: 200px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
         margin: 0px;
       }
     }
@@ -93,11 +92,12 @@
   .product {
     display: block;
 
+    margin-right: -20px;
     .image {
       img {
-        display: block;
-        margin-left: 30%;
-        width: 280px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
         margin: 0px;
       }
     }
@@ -112,8 +112,10 @@
     display: block;
     .image {
       img {
-        margin: 0px;
-        width: 280px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
         margin: 0px;
       }
     }
@@ -122,6 +124,7 @@
     }
   }
 }
+
 @media (min-width: 500px) and (max-width: 800px) {
   .container {
     margin-left: 0px;
