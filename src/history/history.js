@@ -1,3 +1,3 @@
-const createHistory = require("history").createBrowserHistory;
+import { createHashHistory } from "history";
 
-export default createHistory();
+export default createHashHistory();

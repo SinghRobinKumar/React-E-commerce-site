@@ -14,8 +14,7 @@ const App = () => {
   };
 
   return (
-    <HashRouter>
-      {/* <Router history={history} basename="React-E-commerce-site/"> */}
+    <HashRouter history={history}>
       <Nav onSearch={onSearchResults} />
       <Switch>
         <Route path="/" exact>
@@ -26,7 +25,6 @@ const App = () => {
         </Route>
       </Switch>
       <Footer />
-      {/* </Router> */}
     </HashRouter>
   );
 };
