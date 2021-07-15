@@ -34,3 +34,14 @@
   color: black;
   font-weight: bolder;
 }
+
+@media (max-width: 500px) {
+  .filter span {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .filter .filterItems {
+    padding: 4px 4px;
+    font-size: 13px;
+  }
+}

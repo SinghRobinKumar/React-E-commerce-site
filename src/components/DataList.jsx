@@ -47,14 +47,20 @@ const DataList = ({ search }) => {
   const showingResults = () => {
     return (
       <div
-        className="container"
+        className="container showing-results"
         style={{
           fontSize: "18px",
           marginTop: "25px",
         }}
       >
         Showing <b>{startLength}</b> - <b>{endLength}</b> of
-        <b> {data.length}</b> results
+        <b> {data.length}</b> Results
+        {search && (
+          <span>
+            {" "}
+            for <b>"{search}"</b>
+          </span>
+        )}
       </div>
     );
   };

@@ -68,16 +68,17 @@ const Product = () => {
               <h1 className="price">&#8377;{data.price}</h1>
 
               <div className={`description ${moreDes}`}>
-                <span>
-                  <h6>Description : </h6>
-                  {getDescription(data.description)}
-                </span>
+                {/* <span> */}
+                <h6>Description : </h6>
+                {getDescription(data.description)}
+                {/* </span> */}
                 {hidden === true && (
                   <button className="more" onClick={() => toggleDes()}>
                     Read Less
                   </button>
                 )}
               </div>
+
               {hidden === false && (
                 <button className="more" onClick={() => toggleDes()}>
                   Read More

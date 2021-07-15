@@ -25,3 +25,9 @@ footer div span {
 .terms:hover {
   color: yellow;
 }
+
+@media (max-width: 500px) {
+  footer {
+    font-size: 13px;
+  }
+}

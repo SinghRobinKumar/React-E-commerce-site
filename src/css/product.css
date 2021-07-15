@@ -6,7 +6,6 @@
 }
 
 .product .image {
-  width: 500px;
   margin: 30px;
 }
 
@@ -61,8 +60,15 @@
   font-weight: bold;
 }
 
+.product .details .description .more {
+  font-size: 18px;
+  background-color: white;
+  color: blue;
+  border: none;
+}
+
 .product .details .description.half {
-  height: 14.5%;
+  height: 210px;
   overflow: hidden;
 }
 
@@ -77,19 +83,16 @@
   border: none;
 }
 
-@media (max-width: 400px) {
+@media (min-width: 200) and (max-width: 300px) {
   .product {
     display: block;
   }
   .product .image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin-left: 0px;
   }
   .product .image img {
+    display: block;
+    margin-left: 30%;
     width: 200px;
     margin: 0px;
   }
@@ -98,25 +101,28 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
-  .container {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 75%;
-  }
+@media (min-width: 300px) and (max-width: 400px) {
   .product {
     display: block;
   }
-  .product .image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .product .image img {
+    display: block;
+    margin-left: 30%;
+    width: 280px;
+    margin: 0px;
+  }
+  .product .details {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .product {
+    display: block;
   }
   .product .image img {
-    width: 300px;
+    margin: 0px;
+    width: 280px;
     margin: 0px;
   }
   .product .details {
@@ -161,7 +167,7 @@
     height: auto;
     width: 400px;
     max-height: 600px;
-    margin: 30px;
+    margin-left: 0px;
   }
 }
 
