@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <HashRouter basename="React-E-commerce-site/">
+    <HashRouter>
       {/* <Router history={history} basename="React-E-commerce-site/"> */}
       <Nav onSearch={onSearchResults} />
       <Switch>
