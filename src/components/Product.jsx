@@ -1,28 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import faker from "faker";
-
-import "../css/product.css";
+import "../scss/product.scss";
 import products from "../data/products.json";
 import reviews from "../data/reviews.json";
 
-const Product = () => {
+const Product = ({ getCartItems, cartItems }) => {
   const { id } = useParams();
   const [data, setData] = useState();
   const [comments] = useState(reviews);
   const [moreDes, setMoreDes] = useState("half");
+
+  let desCount;
+  // const [showDes, setShowDes] = useState(true);
   const [hidden, setHidden] = useState(false);
+  const [added, setAdded] = useState(false);
 
   const fetchData = id => {
     const data = products;
     const result = data.filter(data => data._id == id);
+
     result.map(d => {
+      cartItems.map(c => {
+        if (d._id === c._id) {
+          setAdded(true);
+        }
+      });
       setData(d);
     });
   };
 
   useEffect(() => {
     fetchData(id);
+    window.scrollTo(0, 0);
   }, []);
 
   const getCategory = category => {
@@ -31,18 +41,23 @@ const Product = () => {
     return cat;
   };
   const getDescription = description => {
-    // const des = description;
-    // var count = 0;
-    // for (var i = 0; i < des.length; i++) {
-    //   count += des[i].innerHTML.split(" ").length;
-    //   console.log(count);
+    console.log(description[0].length);
+
+    desCount = description[0].length;
+
+    // if (description[0].length < 435) {
+    //   setShowDes(false);
     // }
-    // console.log(des);
     return description;
   };
   const toggleDes = () => {
     setHidden(hidden === true ? false : true);
     setMoreDes(moreDes === "half" ? "full" : "half");
+  };
+
+  const getItems = data => {
+    setAdded(true);
+    getCartItems(data);
   };
 
   return (
@@ -66,20 +81,34 @@ const Product = () => {
                 </span>
               </p>
               <h1 className="price">&#8377;{data.price}</h1>
+              <button
+                onClick={() => getItems(data)}
+                className={`cart ${!added ? "add" : "added"}`}
+              >
+                {!added ? (
+                  <>
+                    <i className="fas fa-shopping-cart fa-1.5x"></i>Add To Cart
+                  </>
+                ) : (
+                  <>
+                    <i className="fas fa-check fa-1.5x"></i>
+                    Added To Cart
+                  </>
+                )}
+              </button>
 
               <div className={`description ${moreDes}`}>
-                {/* <span> */}
                 <h6>Description : </h6>
                 {getDescription(data.description)}
-                {/* </span> */}
-                {hidden === true && (
+
+                {hidden === true && desCount > 435 && (
                   <button className="more" onClick={() => toggleDes()}>
                     Read Less
                   </button>
                 )}
               </div>
 
-              {hidden === false && (
+              {hidden === false && desCount > 435 && (
                 <button className="more" onClick={() => toggleDes()}>
                   Read More
                 </button>

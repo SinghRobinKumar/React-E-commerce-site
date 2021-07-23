@@ -5,7 +5,7 @@ const Pagination = props => {
   const {
     onPageChange,
     totalCount,
-    siblingCount = 1,
+    siblingCount = 0,
     currentPage,
     pageSize,
     className,
@@ -41,11 +41,18 @@ const Pagination = props => {
         })}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+        <div className="arrow left">
+          <span className="arrows">&#8676; </span>
+          <span className="text">Prev</span>
+        </div>
       </li>
       {paginationRange.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
-          return <li className="pagination-item dots">&#8230;</li>;
+          return (
+            <li key={index} className="pagination-item dots">
+              &#8230;
+            </li>
+          );
         }
 
         return (
@@ -66,7 +73,10 @@ const Pagination = props => {
         })}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        <div className="arrow right">
+          <span className="text">Next</span>
+          <span className="arrows"> &#8677;</span>
+        </div>
       </li>
     </ul>
   );

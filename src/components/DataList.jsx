@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import DataItem from "./DataItem";
 import _ from "lodash";
-import "../css/dataList.css";
+import "../scss/dataList.scss";
 import FilterComponent from "./FilterComponent.jsx";
 import Pagination from "./Pagination/Pagination";
 import products from "../data/products.json";
@@ -32,6 +32,10 @@ const DataList = ({ search }) => {
     getSearchedData(originalData);
   }, [search]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const currentPageData = useMemo(() => {
     let firstPageIndex = (currentPage - 1) * PageSize;
     setStartLength(firstPageIndex + 1);
@@ -46,13 +50,7 @@ const DataList = ({ search }) => {
 
   const showingResults = () => {
     return (
-      <div
-        className="container showing-results"
-        style={{
-          fontSize: "18px",
-          marginTop: "25px",
-        }}
-      >
+      <section className="container showing-results">
         Showing <b>{startLength}</b> - <b>{endLength}</b> of
         <b> {data.length}</b> Results
         {search && (
@@ -61,13 +59,13 @@ const DataList = ({ search }) => {
             for <b>"{search}"</b>
           </span>
         )}
-      </div>
+      </section>
     );
   };
 
   return (
     <section>
-      {showingResults()}
+      <span className="show-results">{showingResults()}</span>
       <FilterComponent onSortedData={sortedData} data={data} />
       <hr width="100%" className="container" />
       <section className="container card-container">

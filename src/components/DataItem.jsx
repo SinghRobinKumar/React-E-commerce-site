@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/dataList.css";
+import "../scss/dataList.scss";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const DataItem = ({ data }) => {
@@ -7,7 +7,7 @@ const DataItem = ({ data }) => {
     <article className="card">
       <Link
         to={`/product/${data._id}`}
-        target="_blank"
+        // target="_blank"
         style={{ color: "#ffffff", textDecoration: "none" }}
       >
         <div className="inner-div">

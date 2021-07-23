@@ -13,6 +13,8 @@
 
     .title {
       font-size: 22px;
+      display: flex;
+      flex-direction: row;
       margin-bottom: 15px;
     }
     .rank {
@@ -24,9 +26,28 @@
     }
     .price {
       font-size: 24px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       color: #000000;
     }
+    .cart {
+      border: none;
+      padding: 10px;
+      width: auto;
+      margin-bottom: 25px;
+      text-decoration: none;
+      color: black;
+      i {
+        margin-right: 10px;
+      }
+    }
+    .cart.add {
+      background-color: rgb(236, 221, 86);
+    }
+    .cart.added {
+      background-color: rgb(0, 255, 98);
+      pointer-events: none;
+    }
+
     .category {
       font-size: 15px;
       color: #03246b;
@@ -56,11 +77,11 @@
       }
     }
     .description.half {
-      height: 210px;
+      height: 92px;
       overflow: hidden;
     }
     .description.full {
-      height: 100%;
+      overflow: visible;
     }
     .more {
       font-size: 18px;

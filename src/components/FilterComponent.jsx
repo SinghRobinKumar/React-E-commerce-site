@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import _ from "lodash";
-import "../css/filter.css";
+import "../scss/filter.scss";
 
 const FilterComponent = ({ data, onSortedData }) => {
   const [active, setActive] = useState(0);

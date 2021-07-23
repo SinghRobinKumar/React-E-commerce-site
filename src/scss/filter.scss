@@ -30,15 +30,24 @@
   }
 }
 
-@media (max-width: "500px") {
+@media (max-width: 390px) {
   .filter {
     span {
-      font-size: 13px;
-      margin-right: 5px;
+      margin-top: 18px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .filter {
+    display: block;
+    margin-bottom: 20px;
+    span {
+      display: block;
+      margin-top: 18px;
     }
     .filterItems {
-      padding: 4px 4px;
-      font-size: 13px;
+      display: block;
     }
   }
 }

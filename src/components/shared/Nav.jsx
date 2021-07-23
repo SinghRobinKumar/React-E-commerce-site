@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/nav.css";
+import "../../scss/nav.scss";
 import { Link } from "react-router-dom";
 import history from "../../history/history";
 
