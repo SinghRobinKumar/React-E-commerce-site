@@ -10,11 +10,10 @@ const Product = ({ getCartItems, cartItems }) => {
   const [data, setData] = useState();
   const [comments] = useState(reviews);
   const [moreDes, setMoreDes] = useState("half");
-
-  let desCount;
-  // const [showDes, setShowDes] = useState(true);
   const [hidden, setHidden] = useState(false);
   const [added, setAdded] = useState(false);
+
+  let desCount;
 
   const fetchData = id => {
     const data = products;
@@ -41,13 +40,7 @@ const Product = ({ getCartItems, cartItems }) => {
     return cat;
   };
   const getDescription = description => {
-    console.log(description[0].length);
-
     desCount = description[0].length;
-
-    // if (description[0].length < 435) {
-    //   setShowDes(false);
-    // }
     return description;
   };
   const toggleDes = () => {
@@ -96,7 +89,6 @@ const Product = ({ getCartItems, cartItems }) => {
                   </>
                 )}
               </button>
-
               <div className={`description ${moreDes}`}>
                 <h6>Description : </h6>
                 {getDescription(data.description)}
@@ -107,12 +99,12 @@ const Product = ({ getCartItems, cartItems }) => {
                   </button>
                 )}
               </div>
-
               {hidden === false && desCount > 435 && (
                 <button className="more" onClick={() => toggleDes()}>
                   Read More
                 </button>
               )}
+              {getDetails(data)}
             </div>
           </>
         )}
@@ -136,6 +128,68 @@ const Product = ({ getCartItems, cartItems }) => {
     </section>
   );
 };
+
+const getDetails = details => (
+  <details>
+    <summary>Details</summary>
+    <table>
+      <tr>
+        <th>Product</th>
+        {details.productgroup && <td>{details.productgroup}</td>}
+      </tr>
+      {details.label && (
+        <tr>
+          <th>Label</th>
+          <td>{details.label}</td>
+        </tr>
+      )}
+      {details.binding && (
+        <tr>
+          <th>Binding</th>
+          <td>{details.binding}</td>
+        </tr>
+      )}
+
+      {details.edition && (
+        <tr>
+          <th>Edition</th>
+          <td>{details.edition}</td>
+        </tr>
+      )}
+      {details.releasedate && (
+        <tr>
+          <th>Release Date</th>
+          <td>{details.releasedate.$date}</td>
+        </tr>
+      )}
+
+      {details.manufacturer && (
+        <tr>
+          <th>Manufacturer</th>
+          <td>{details.manufacturer}</td>
+        </tr>
+      )}
+      {details.studio && (
+        <tr>
+          <th>Studio</th>
+          <td>{details.studio}</td>
+        </tr>
+      )}
+      {details.salesrank && (
+        <tr>
+          <th>Sales Rank</th>
+          <td>{details.salesrank}</td>
+        </tr>
+      )}
+      {details.feature && (
+        <tr>
+          <th>Feature</th>
+          <td>{details.feature}</td>
+        </tr>
+      )}
+    </table>
+  </details>
+);
 
 const printComments = comment => {
   let firstName = faker.name.firstName();

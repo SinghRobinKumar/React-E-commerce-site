@@ -51,6 +51,7 @@ const cartItem = c => {
       </div>
       <div className="details">
         <Link
+          className="product-link"
           style={{ textDecoration: "none", color: "black" }}
           to={`/product/${c._id}`}
         >

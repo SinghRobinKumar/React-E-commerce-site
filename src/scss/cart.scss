@@ -108,6 +108,14 @@
     }
 
     .details {
+      .product-link {
+        h3 {
+          &:hover {
+            font-weight: bolder;
+          }
+        }
+      }
+
       h3 {
         font-size: 16px;
         margin-bottom: 15px;
@@ -130,7 +138,6 @@
         select {
           margin-left: 10px;
           width: 50px;
-          background-color: rgb(234, 215, 236);
           option {
             width: 20px;
           }
