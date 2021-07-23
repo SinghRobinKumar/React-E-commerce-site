@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
 import DataItem from "./DataItem";
-import _ from "lodash";
 import "../scss/dataList.scss";
 import FilterComponent from "./FilterComponent.jsx";
 import Pagination from "./Pagination/Pagination";
@@ -14,9 +13,7 @@ const DataList = ({ search }) => {
   const [endLength, setEndLength] = useState();
   const [currentPage, setCurrentPage] = useState(1);
 
-  const [data, setData] = useState(
-    _.orderBy(products, ["salesrank"], ["desc"])
-  );
+  const [data, setData] = useState(products);
 
   const getSearchedData = data => {
     const result = data.filter(
